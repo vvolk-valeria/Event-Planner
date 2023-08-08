@@ -1,23 +1,40 @@
+import React from 'react';
+// import { useEffect, lazy } from 'react';
+// import { useDispatch } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
+import { Layout } from './components/Layout';
+
+import HomePage from './pages/HomePage';
+import EventPage from './pages/EventPage/EventPage';
+import EventCreationPage from './pages/EventCreationPage/EventCreationPage';
+// const HomePage = lazy(() => import('./pages/HomePage'));
 
 
-function App() {
+//import { refreshUser } from '../redux/auth/operations';
+
+
+//const PhonebookPage = lazy(() => import('../pages/Phonebook'));
+
+export const App = () => {
+  // const dispatch = useDispatch();
+  // const { isRefreshing } = useAuth();
+
+  // useEffect(() => {
+  //   dispatch(refreshUser());
+  // }, [dispatch]);
+
   return (
-    <div >
-      {/* <header >
-         <img src={logo} className="App-logo" alt="logo" /> 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
-  );
-}
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+     
+        <Route path="events/:eventId" element={<EventPage />} />
+        <Route path="events/create" element={<EventCreationPage />} />
 
-export default App;
+       <Route path="events/filter/:category" element={<HomePage />} />
+      </Route>
+      
+    </Routes>
+  );
+};
+
