@@ -26,7 +26,10 @@ export const Container = styled.div`
 
 export const Section = styled.section`
   padding-top: 40px;
-  //background-image:url(https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/bg.png);
+  background-image:url('https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/bg1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
   @media screen and (min-width: 1280px) {
     padding-top: 60px;
   }

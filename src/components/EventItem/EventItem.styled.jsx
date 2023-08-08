@@ -76,7 +76,7 @@ export const PriorityLow = styled(Category)`
   color: var(--low-color);
 `;
 
-export const LocationBox = styled.p`
+export const LocationBox = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;

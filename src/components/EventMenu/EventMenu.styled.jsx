@@ -113,6 +113,9 @@ export const BtnMenu = styled.button`
   @media screen and (max-width: 1280px) {
     width: 158px;
   }
+  @media screen and (min-width: 1280px) {
+    width: 170px;
+  }
 `;
 
 export const BtnMenuTablet = styled(BtnMenu)`
@@ -121,6 +124,7 @@ export const BtnMenuTablet = styled(BtnMenu)`
   :hover {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   }
+  width: auto;
 `;
 
 export const CategoryMenu = styled.li`
