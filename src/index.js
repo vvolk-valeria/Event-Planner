@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     <Provider  store={store}>
     <BrowserRouter 
-     basename="/Event-Planner/
+    basename="Event-Planner"
     >
     <App />
     </BrowserRouter>
