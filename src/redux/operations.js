@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://63ae1642ceaabafcf172c8fe.mockapi.io/";
+axios.defaults.baseURL = "https://63ae1642ceaabafcf172c8fe.mockapi.io/";
 
 
 // export const getEventsByCategories = createAsyncThunk(
