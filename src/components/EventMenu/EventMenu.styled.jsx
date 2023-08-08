@@ -108,6 +108,11 @@ export const BtnMenu = styled.button`
   border-top-right-radius: 8px;
   border: none;
   cursor: pointer;
+  z-index:100;
+
+  @media screen and (max-width: 1280px) {
+    width: 158px;
+  }
 `;
 
 export const BtnMenuTablet = styled(BtnMenu)`
@@ -164,7 +169,7 @@ export const PlusIcon = styled(Plus)`
   @media screen and (min-width: 768px) {
     margin-right: 20px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     margin-right: 16px;
   }
 `;
@@ -172,16 +177,24 @@ export const PlusIcon = styled(Plus)`
 export const SortIcon = styled(Sort)`
   width: 24px;
   height: 24px;
-  margin-left: 16px;
+  
+  @media screen and (min-width: 1280px) {
+    margin-left: 16px;
+  }
 `;
 
 export const CategoryIcon = styled(Category)`
   width: 24px;
   height: 24px;
-  margin-left: 16px;
+  @media screen and (min-width: 1280px) {
+    margin-left: 16px;
+  }
+
 `;
 export const SortIconHover = styled(SortHover)`
   width: 24px;
   height: 24px;
-  margin-left: 16px;
+  @media screen and (min-width: 1280px) {
+    margin-left: 16px;
+  }
 `;

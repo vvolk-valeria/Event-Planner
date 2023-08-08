@@ -98,7 +98,7 @@ const EventCreationPage = () => {
  imageURL: '',
     priority: '',
   };
-
+const randomNumber= makeRandomNumber();
   const handleAddEvent = newData => {
     const newEvent = {
       title: newData.title,
@@ -108,8 +108,12 @@ const EventCreationPage = () => {
       location: newData.location,
       category: newData.category,
       priority: newData.priority,
-   imageURL: newData.imageURL,
+  //  imageURL: newData.imageURL,
+   imageURL: `https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/eventPictures/event${randomNumber}.png`,
     };
+    console.log(imageURL);
+    console.log(newEvent);
+   
      dispatch(addEvent(newEvent));
     navigete('/');
     return;
@@ -143,9 +147,9 @@ const EventCreationPage = () => {
       });
   };
 
-
+  // https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/eventPictures/event0.png
+  // https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/eventPictures/event5.png
   
-  makeRandomNumber();
   return (
     <Section>
       <Container>

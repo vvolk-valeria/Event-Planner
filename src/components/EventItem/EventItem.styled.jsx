@@ -7,9 +7,16 @@ export const Item = styled.li`
   overflow: hidden;
   box-shadow: var(--border-shadow);
 
+  margin-left: auto;
+  margin-right: auto;
+
   :not(:last-child) {
     margin-bottom: 24px;
     background-color: var(--white-color);
+  }
+
+   @media screen and (min-width: 320px) {
+    width:272px;
   }
 `;
 
@@ -24,26 +31,36 @@ export const Cover = styled.div`
   background-color: rgb(182, 180, 180, 0.5);
   margin-right: auto;
   margin-left: auto;
-  background-image: url('https://res.cloudinary.com/daud0cvhu/image/upload/v1679907667/placeholder.jpg.jpg');
+  background-image: url('https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/35890f4112496ddd5175982849ff6eb6b26d9b8b/src/images/placeholderVertica1l.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 `;
 
-// .img {
-//   display: block;
-//   width: 280px;
-//   min-height: 288px;
-//   object-fit: cover;
-//   overflow: hidden;
-// }
+export const Img = styled.img`
+display: block;
+width: 100%;
+ height: 336px;
+   object-fit: cover;
+   overflow: hidden;
+`;
+
+
+export const BoxCategory = styled.div`
+       display:flex;
+            align-items:center;
+            position:absolute;
+            margin-left:12px;
+            margin-top:12px;
+            z-index:2;
+`;
 
 export const Category = styled.p`
   padding: 6px 12px 6px 12px;
   border-radius: 8px;
   background-color: var(--white-color);
   color: var(--accent-color);
-
+  z-index:3;
   :not(:last-child) {
     margin-right: 12px;
   }

@@ -113,6 +113,7 @@ export const Btn = styled.button`
   color: var(--white-color);
   margin-top: 20px;
   width: 100%;
+  cursor: pointer;
 
   :hover {
     background-color: var(--button-hover);
@@ -122,6 +123,7 @@ export const Btn = styled.button`
     width: auto;
     padding:16px 55px;
     margin-left:auto;
+    z-index:1000;
   }
 `;
 

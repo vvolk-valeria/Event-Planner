@@ -59,9 +59,9 @@ export const Cover = styled.div`
   object-fit: cover;
   overflow: hidden;
   background-color: grey;
-  /* margin-right: auto;
-  margin-left: auto; */
-  //background-image: url(../../images/placeholder.jpg);
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url('https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/35890f4112496ddd5175982849ff6eb6b26d9b8b/src/images/placeholderHorizontal.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -71,13 +71,16 @@ export const Cover = styled.div`
   }
 `;
 
-// .img {
-//   display: block;
-//   width: 280px;
-//   min-height: 288px;
-//   object-fit: cover;
-//   overflow: hidden;
-// }
+export const Img = styled.img`
+display: block;
+width: 100%;
+ height: 168px;
+   object-fit: cover;
+   overflow: hidden;
+   @media screen and (min-width: 768px) {
+    height: 272px;
+  }
+`;
 
 export const Text = styled.p`
   margin-bottom: 24px;

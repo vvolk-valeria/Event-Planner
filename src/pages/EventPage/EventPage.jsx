@@ -19,6 +19,7 @@ import {
   BtnItem,
   BoxItem,
   SectionEventPage,
+  Img
 } from './EventPage.styled';
 //import { Box } from '../../helpers/Box';
 import { useState, useEffect } from 'react';
@@ -91,9 +92,9 @@ const EventPage = () => {
 
           <Item>
             <Cover>
-              {/* {item.imageURL ? (
-            <img src={item.imageURL} className={css.img} alt="Pet" />
-          ) : null} */}
+              {event.imageURL ? (
+            <Img src={event.imageURL} alt="Event" />
+          ) : null}
             </Cover>
 
             <InfoContainer>

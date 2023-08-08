@@ -18,11 +18,15 @@ export const Container = styled.div`
     width: 1280px;
     /* padding-right: 80px;
       padding-left: 80px; */
+      
+    position:relative;
+
   }
 `;
 
 export const Section = styled.section`
   padding-top: 40px;
+  //background-image:url(https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/bg.png);
   @media screen and (min-width: 1280px) {
     padding-top: 60px;
   }

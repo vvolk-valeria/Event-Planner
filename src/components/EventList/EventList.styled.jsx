@@ -19,18 +19,27 @@ export const Title = styled.h2`
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 0;
+    position:absolute;
+    top:0;
+    left: 40px;
+  }
 `;
 
 export const List = styled.ul`
   margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
   display: grid;
   grid-template-columns: 332px 332px;
   grid-gap: 24px;
-
+  }
   @media screen and (min-width: 1280px) {
     grid-template-columns: 280px 280px 280px 280px;
     grid-column-gap: 24px;
     grid-row-gap: 40px;
     margin-bottom: 32px;
+
   }
 `;

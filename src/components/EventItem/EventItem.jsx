@@ -5,11 +5,13 @@ import {
   Text,
   Category,
   LocationBox,
+  BoxCategory,
   Location,
   Btn,
   PriorityHigh,
   PriorityMedium,
   PriorityLow,
+  Img
 } from './EventItem.styled';
 import { useLocation } from 'react-router-dom';
 import { Box } from '../../helpers/Box';
@@ -41,19 +43,15 @@ export const EventItem = ({ item }) => {
     <>
       <Item>
         <Cover>
-          {/* {item.imageURL ? (
-            <img src={item.imageURL} className={css.img} alt="Event" />
-          ) : null} */}
+          {item.imageURL ? (
+            <Img src={item.imageURL} alt="Event" />
+          ) : (null)}
 
-          <Box
-            display="flex"
-            alignItems="center"
-            marginLeft="12px"
-            marginTop="12px"
+          <BoxCategory
           >
             <Category>{item.category}</Category>
             {priorityMarkup}
-          </Box>
+          </BoxCategory>
 
           <LocationBox>
             <Location>
