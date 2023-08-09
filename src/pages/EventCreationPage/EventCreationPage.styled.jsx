@@ -131,6 +131,7 @@ export const Btn = styled.button`
     padding:16px 55px;
     margin-left:auto;
     z-index:1000;
+    position: relative;
   }
 `;
 
