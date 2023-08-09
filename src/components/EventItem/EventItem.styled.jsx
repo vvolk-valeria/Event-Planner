@@ -9,14 +9,14 @@ export const Item = styled.li`
 
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--white-color);
 
   :not(:last-child) {
     margin-bottom: 24px;
-    background-color: var(--white-color);
   }
 
-   @media screen and (min-width: 320px) {
-    width:272px;
+  @media screen and (min-width: 320px) {
+    width: 272px;
   }
 `;
 
@@ -38,21 +38,20 @@ export const Cover = styled.div`
 `;
 
 export const Img = styled.img`
-display: block;
-width: 100%;
- height: 336px;
-   object-fit: cover;
-   overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 336px;
+  object-fit: cover;
+  overflow: hidden;
 `;
 
-
 export const BoxCategory = styled.div`
-       display:flex;
-            align-items:center;
-            position:absolute;
-            margin-left:12px;
-            margin-top:12px;
-            z-index:2;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 12px;
+  z-index: 2;
 `;
 
 export const Category = styled.p`
@@ -60,7 +59,7 @@ export const Category = styled.p`
   border-radius: 8px;
   background-color: var(--white-color);
   color: var(--accent-color);
-  z-index:3;
+  z-index: 3;
   :not(:last-child) {
     margin-right: 12px;
   }
@@ -101,20 +100,24 @@ export const Text = styled.p`
   font-weight: var(--regular-weight);
 `;
 
-export const Btn = styled(Link)`
-  display: inline-block;
+export const LinkBtn = styled(Link)`
+  text-decoration: none;
+  font-size: var(--body-caption-size);
+  font-weight: var(--medium-weight);
+  color: var(--white-color);
+`;
+
+export const Btn = styled.button`
+  display: block;
   padding: 10px 24px;
   margin-top: 8px;
 
-  margin-left: auto;
   border: none;
   border-radius: 8px;
   background-color: var(--button-default);
   text-decoration: none;
-
-  font-size: var(--body-caption-size);
-  font-weight: var(--medium-weight);
-  color: var(--white-color);
+ margin-left: auto;
+ 
 
   :hover {
     background-color: var(--button-hover);

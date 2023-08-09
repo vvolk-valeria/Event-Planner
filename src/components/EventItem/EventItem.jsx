@@ -7,7 +7,7 @@ import {
   LocationBox,
   BoxCategory,
   Location,
-  Btn,
+  Btn,LinkBtn,
   PriorityHigh,
   PriorityMedium,
   PriorityLow,
@@ -16,10 +16,20 @@ import {
 import { useLocation } from 'react-router-dom';
 import { Box } from '../../helpers/Box';
 import { makeData } from '../../helpers/helpers';
-
+import { useState } from 'react';
 // import { toast } from 'react-toastify';
 
 export const EventItem = ({ item }) => {
+
+  const [showBtn, setShowBtn] = useState(false);
+  
+  const onMouseEnter = ()=>{
+    setShowBtn(true);
+  }
+  const onMouseLeave = ()=>{
+    setShowBtn(false);
+  }
+
   const location = useLocation();
 
   const getColor = item => {
@@ -39,9 +49,12 @@ export const EventItem = ({ item }) => {
 
   const formatDate = makeData(item);
 
+
   return (
     <>
-      <Item>
+      <Item 
+      onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}
+      >
         <Cover>
           {item.imageURL ? (
             <Img src={item.imageURL} alt="Event" />
@@ -66,9 +79,10 @@ export const EventItem = ({ item }) => {
 
           <Text> {item.description}</Text>
 
-          <Btn to={`/events/${item.id}`} state={{ from: location }}>
-            More info
-          </Btn>
+{showBtn && <Btn><LinkBtn to={`/events/${item.id}`} state={{ from: location }} > More info</LinkBtn>  
+           
+          </Btn>}
+          
         </Box>
       </Item>
     </>

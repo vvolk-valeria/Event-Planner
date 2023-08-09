@@ -30,12 +30,7 @@ html {
   --button-disable: #ACA7C3;
 
   --border-shadow: 2px 4px 9px 0px rgba(166,141,174,0.28);
-  /*  A68DAE
- x2
- y4
- blur 9
- 28 % */
- /* box-shadow: 4px 5px 9px 0px rgba(166,141,174,0.28); */
+ 
 
 /* font-size */
   --header-size: 32px;
@@ -55,8 +50,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: var(--body-caption-size);
   font-weight: var(--medium-weight);
-  /* background-color: rgba(253, 247, 242, 1);
-  line-height: 1.4; */
+
 }
 
 .react-icons {

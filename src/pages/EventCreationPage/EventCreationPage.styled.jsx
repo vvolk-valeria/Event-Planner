@@ -23,7 +23,14 @@ export const FormContainer = styled(Form)`
   border-radius: 8px;
   box-shadow: var(--border-shadow);
   margin-bottom: 8px;
+  background-color:var(--white-color);
+  margin-left:auto;
+  margin-right:auto;
 
+  @media (min-width: 320px) and (max-width: 767px) {
+ width:272px;
+
+  }
   @media screen and (min-width: 768px) {
     padding-left:24px;
     padding-right:24px;
@@ -152,10 +159,11 @@ export const Error = styled(ErrorMessage)`
 `;
 
 
-export const GridContainer = styled(Form)`
+export const GridContainer = styled.div`
+
 @media screen and (min-width: 768px) {
 display: grid;
- grid-template-columns:calc(100%/2) calc(100%/2);
+ grid-template-columns:308px 308px;
  grid-column-gap: 24px;
 }
 

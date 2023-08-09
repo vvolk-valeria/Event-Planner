@@ -147,9 +147,7 @@ const randomNumber= makeRandomNumber();
       });
   };
 
-  // https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/eventPictures/event0.png
-  // https://raw.githubusercontent.com/vvolk-valeria/Event-Planner/main/src/images/eventPictures/event5.png
-  
+
   return (
     <Section>
       <Container>

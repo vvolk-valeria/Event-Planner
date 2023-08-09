@@ -181,7 +181,9 @@ export const PlusIcon = styled(Plus)`
 export const SortIcon = styled(Sort)`
   width: 24px;
   height: 24px;
-  
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+  }
   @media screen and (min-width: 1280px) {
     margin-left: 16px;
   }
@@ -190,6 +192,9 @@ export const SortIcon = styled(Sort)`
 export const CategoryIcon = styled(Category)`
   width: 24px;
   height: 24px;
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+  }
   @media screen and (min-width: 1280px) {
     margin-left: 16px;
   }
@@ -198,6 +203,9 @@ export const CategoryIcon = styled(Category)`
 export const SortIconHover = styled(SortHover)`
   width: 24px;
   height: 24px;
+  @media screen and (min-width: 768px) {
+    margin-left: 20px;
+  }
   @media screen and (min-width: 1280px) {
     margin-left: 16px;
   }
