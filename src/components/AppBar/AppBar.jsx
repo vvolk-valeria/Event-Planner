@@ -11,7 +11,7 @@ export const AppBar = () => {
           <Logo />
           <EventSearch />
           <Btn type="button">
-            UK <DownIcon />
+            En <DownIcon />
           </Btn>
         </ContainerAppBar>
       </Container>

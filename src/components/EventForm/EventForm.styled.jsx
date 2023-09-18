@@ -96,17 +96,8 @@ export const Input = styled(Field)`
   color: var(--text-color);
   cursor: pointer;
 
-  :valid{
-    border: 1px solid var(--divider-color);
-  }
-  
-:required:invalid{
-    border: 1px solid var(--divider-color);
-  }
+  border-color: ${props => props.$error && 'var(--hight-color)'};
 
-:invalid{
-    border: 1px solid var(--hight-color);
-  }
 `;
 
 export const Btn = styled.button`
@@ -138,16 +129,6 @@ export const Option = styled.option`
   font-size: var(--title-size);
   font-weight: var(--regular-weight);
   color: var(--text-color);
-`;
-
-export const OptionHigh = styled.option`
-  color: var(--hight-color);
-`;
-export const OptionMedium = styled.option`
-  color: var(--medium-color);
-`;
-export const OptionLow = styled.option`
-  color: var(--low-color);
 `;
 
 export const Error = styled(ErrorMessage)`

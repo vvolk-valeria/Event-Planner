@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { List, Item } from './Modal.styled';
-//import { NavLink } from 'react-router-dom';
-//import { useLocation } from 'react-router-dom';
+import { List, Item, ItemLink } from './Modal.styled';
+import { useLocation } from 'react-router-dom';
 
 export function Modal({ items, onClose }) {
- // const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     const handleKeyDown = e => {
@@ -23,12 +22,15 @@ export function Modal({ items, onClose }) {
 
     <List>
       {items.map(item => {
-        return (
-          <Item key={item.key} onClick={onClose}>
-            {item.value} {item.icon}{' '}
-          </Item>
-        );
-        // return <Item key={item.key}><NavLink to={`/events/filter/${item.href}`} state={{ from: location }}>{item.value} {item.icon}</NavLink></Item>;
+
+         return (<Item key={item.key}>
+          <ItemLink to={`/events/filter/${item.href}`} 
+          state={{ from: location }}
+          onClick={onClose}
+          >
+            {item.value} {item.icon}
+            </ItemLink>
+            </Item>);
       })}
     </List>
   );

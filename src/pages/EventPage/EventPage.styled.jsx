@@ -3,6 +3,7 @@ import {
   Section,
   Title
 } from '../Pages.styled';
+import { Link } from 'react-router-dom';
 
 export const SectionEventPage = styled(Section)`
   @media screen and (min-width: 320px) {
@@ -182,11 +183,11 @@ export const Btn = styled.button`
   border: 1px solid var(--button-default);
   width: 108px;
 
-  :last-child {
-    background-color: var(--button-default);
-    color: var(--white-color);
-    border: 1px solid transparent;
-  }
+  // :last-child {
+  //   background-color: var(--button-default);
+  //   color: var(--white-color);
+  //   border: 1px solid transparent;
+  // }
 
   :hover {
     background-color: var(--button-hover);
@@ -198,4 +199,19 @@ export const TitleItem = styled(Title)`
   @media screen and (min-width: 1280px) {
     margin-bottom: 14px;
   }
+`;
+
+export const LinkBtn = styled(Link)`
+ text-decoration:none;
+ display: inline-block;
+ font-size: 12px;
+ font-weight: var(--medium-weight);
+//  background-color: var(--white-color);
+ color: var(--accent-color);
+//  border: 1px solid var(--button-default);
+  width: 100%;
+
+${Btn}:hover & {
+  color: var(--white-color);
+}
 `;

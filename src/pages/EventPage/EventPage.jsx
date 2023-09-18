@@ -1,13 +1,12 @@
 import {
-  Container,
-  LinkToBack,
-  ArrowIcon,
+  Container
 } from '../Pages.styled';
 import {
   Item,
   Cover,
   Text,
   Btn,
+  LinkBtn,
   InfoBox,
   Info,
   TitleItem,
@@ -27,15 +26,15 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { deleteEvent } from '../../redux/operations';
 import { getEventById, makeData } from '../../helpers/helpers';
 import { useDispatch } from 'react-redux';
+import {LinkToBack} from '../../components/LinkToBack/LinkToBack';
 
 const EventPage = () => {
   const [event, setEvent] = useState(null);
   const dispatch = useDispatch();
   const navigete = useNavigate();
 
-  const location = useLocation();
+   const location = useLocation();
 
-  const backLinkHref = location.state?.from ?? '/';
 
   let { pathname } = useLocation();
   let eventId = pathname.split('/').pop();
@@ -83,10 +82,9 @@ const EventPage = () => {
   return (
     <SectionEventPage>
       <Container>
-        <LinkToBack to={backLinkHref}>
-          <ArrowIcon /> Back
-        </LinkToBack>
 
+      <LinkToBack/>
+  
         <BoxItem>
           <TitleItem>{event.title}</TitleItem>
 
@@ -114,8 +112,12 @@ const EventPage = () => {
 
               <BtnBox>
                 <BtnItem>
-                  <Btn type="button">Edit</Btn>
+                  <Btn type="button">
+                  <LinkBtn to={`/events/${eventId}/edit`} state={{ from: location }}>Edit</LinkBtn> 
+                   </Btn>
                 </BtnItem>
+
+
                 <BtnItem>
                   <Btn type="button" onClick={removeEvent}>
                     Delete event

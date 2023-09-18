@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const List = styled.ul`
   position: absolute;
@@ -11,19 +12,30 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  display: flex;
+  cursor: pointer;
+`;
+
+export const ItemLink = styled(NavLink)`
+display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 8px 24px;
+
+  border-bottom: 1px solid var(--button-disable);
   color: var(--divider-color);
   font-size: var(--body-caption-size);
   font-weight: var(--regular-weight);
-  border-top: 1px solid var(--button-disable);
-  cursor: pointer;
+  text-decoration:none;
 
-  :hover {
+  ${Item}:hover & {
     color: var(--accent-color);
-    border-color: var(--button-hover);
-    border-bottom: 1px solid var(--button-hover);
+    border-color: var(--button-hover); 
   }
+
+  &.active{
+    border-color:var(--button-hover); 
+     color: var(--accent-color); 
+  }
+
+
 `;
